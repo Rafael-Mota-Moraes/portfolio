@@ -1,0 +1,96 @@
+@import url('./sobre.css');
+@import url('./educacao.css');
+@import url('./links.css');
+
+:root {
+  --primary-color: #0ab4fc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    'menu content'
+    'menu content';
+  grid-template-columns: 30% 1fr;
+  grid-template-rows: 1fr;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.menu {
+  grid-area: 'menu';
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu ul li {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.menu ul li a {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  transition: all ease-in-out 300ms;
+}
+
+.menu ul li a::after {
+  content: '';
+  height: 4px;
+  width: 0%;
+  background-color: rgb(255, 255, 255);
+  transition: all ease-in-out 300ms;
+}
+
+.menu ul li a:hover:after {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  grid-area: 'content';
+  align-items: center;
+  background: #ddd;
+}
+
+@media (max-width: 550px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu {
+    height: 100px;
+  }
+
+  .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .menu ul li {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+  }
+
+  .content {
+    min-height: calc(100vh - 100px);
+  }
+
+}

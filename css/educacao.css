@@ -1,0 +1,35 @@
+.educacao-wrapper {
+  padding: 2rem;
+}
+
+.educacao-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem
+}
+
+.curso {
+  margin: 2rem 0;
+}
+
+.curso a {
+  color: #000;
+  font-size: 1.3rem;
+  padding: .5rem 0;
+}
+
+@media (max-width: 550px) {
+  .educacao-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .curso h2 {
+    font-size: 1rem;
+  }
+
+  .curso a {
+    font-size: 1rem;
+  }
+
+}
